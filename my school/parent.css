@@ -1,0 +1,96 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+}   
+.form
+{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 400px;
+ background: linear-gradient(120deg,red,red, aqua,skyblue,red);
+ border-radius: 15px;
+ height: 450px;
+}
+.form h2
+{
+    color: green;
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 2px solid green;
+}
+.form form
+{
+    padding: 0 50px;
+}
+form .box
+{
+    position: relative;
+    border-bottom: 2px solid green;
+    margin: 30px 0;
+}
+.box input
+{
+    width: 100%;
+    padding:  0 5px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    outline: none; 
+}
+.box label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: skyblue;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.box span::before
+{
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 0%;
+    left: 0;
+    height: 2px;
+    background: yellow;
+    transition: .5s;
+}
+.box input:focus ~ label,
+.box input:valid ~ label
+{
+    top: -7px;
+    color: chocolate;
+}
+.box input:focus ~ span::before,
+.box input:valid ~ span::before
+{
+    width: 100%;
+}
+button
+{
+    background: black;
+    height: 42px;
+    width: 150px;
+    color: aquamarine;
+    border-radius: 20px;
+    cursor: pointer;
+    border-color: red;
+    background: linear-gradient(120deg,aqua,red,aqua,black);
+    
+}
+button:hover{
+    color:chocolate;
+    background: aquamarine;
+ }

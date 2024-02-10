@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creat account</title>
+    <link rel="stylesheet" href="creat account.css">
+</head>
+<body>
+    <div class="box">
+        <div class="manzi">
+            <div class="form">
+                <h2><i><b>creat account</b></i></h2>
+                <form action="home.html">
+                <div class="box">
+                    <input type="text" required="required">
+                    <span></span>
+                    <label for="">User name</label>
+                </div>
+                <div class="box">
+                    <input type="email or number" required="required">
+                    <span></span>
+                    <label for="">E-mail or Phone</label>
+                </div>
+                <div class="box">
+                    <input type="password" id="pass">
+                    <span></span>
+                    <label for="">user password</label>
+                </div>
+                <p id="mess"></p>
+                <button onclick="password()">NEXT</button>
+            </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+function password(){
+    let q=document.getElementById("pass").value;
+    let w=document.getElementById("pass2").value;
+    console.log(q,w);
+    let r=document.getElementById("mess")
+
+    if(q==w){
+        r.textContent="password created"
+        r.style.backgroundColor="green"
+    }
+    else{
+        r.textContent="passwor not match"
+        r.style.backgroundColor="red"
+    }
+     if(q==0 && w==0){
+        alert("please input your password!")
+     }
+}
+</script>
